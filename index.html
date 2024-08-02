@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="menu-btn" class="menu-btn">☰</div>
+    <div id="menu-options" class="menu-hidden">
+        <button id="home-btn">Home</button>
+        <button id="search-btn">Search</button>
+        <button id="library-btn">Library</button>
+    </div>
+
+    <div id="home-page" class="page">
+        <h2>Home</h2>
+        <div id="recent-songs" class="song-list"></div>
+        <div id="trending-songs" class="song-list"></div>
+        <div id="all-songs" class="song-list"></div>
+    </div>
+
+    <div id="search-page" class="page hidden">
+        <h2>Search</h2>
+        <input type="text" id="search-bar" placeholder="Search songs...">
+        <div id="recent-searches" class="song-list"></div>
+    </div>
+
+    <div id="library-page" class="page hidden">
+        <h2>Library</h2>
+        <input type="file" id="file-input" multiple accept=".mp3">
+        <div id="library-songs" class="song-list"></div>
+    </div>
+
+    <div id="song-page" class="page hidden">
+        <img id="song-cover" src="" alt="Song Cover">
+        <h2 id="song-title"></h2>
+        <p id="song-details"></p>
+        <div class="controls">
+            <button id="prev-song">Previous</button>
+            <button id="play-pause">Play</button>
+            <button id="next-song">Next</button>
+        </div>
+        <div class="timeline">
+            <span id="current-time">0:00</span>
+            <input id="song-progress" type="range" min="0" max="100" value="0">
+            <span id="total-time">0:00</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
